@@ -8,7 +8,8 @@ const app = new Hono();
 app.use(
   cors({
     origin: "*", // specify your frontend URL or accept all
-    allowMethods: ["GET", "POST", "PUT", "DELETE"],
+    allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowHeaders: ["Content-Type"],
   })
 );
 
