@@ -7,12 +7,13 @@ export const getAllBooksService = async () => {
 };
 
 export const createBookService = async (book: TIBooks) => {
-  return await db.insert(booksTable).values(book);
+  await db.insert(booksTable).values(book);
+  return book;
 };
 
-export const updateBookService = async (id: number, user: TIBooks) => {
-  await db.update(booksTable).set(user).where(eq(booksTable.id, id));
-  return "Book updated successfully";
+export const updateBookService = async (id: number, book: TIBooks) => {
+  await db.update(booksTable).set(book).where(eq(booksTable.id, id));
+  return book;
 };
 
 export const getBookByIdService = async (
