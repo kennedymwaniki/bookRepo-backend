@@ -27,7 +27,7 @@ export const createBook = async (c: Context) => {
     const book = await c.req.json();
     console.log(book);
     const createdBook = await createBookService(book);
-    if (!createBook) {
+    if (createBook === undefined) {
       return c.text("Book not created");
     }
     return c.json(createBook, 201);
