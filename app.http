@@ -12,12 +12,11 @@ DELETE  http://localhost:3000/api/books/12
 POST http://localhost:3000/api/books
 Content-Type: application/json
 
-{
-    "title": "Book of life",
-    "author": "Author Zoro",
-    "year":2020
-}
-
+ {
+  "title": "Book of life",
+  "author": "Author Zoro",
+   "year": 2003
+ }
 
 
 GET http://localhost:3000/api/books/2
